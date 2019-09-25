@@ -11,4 +11,13 @@ describe('Tests for Home screen', () => {
 
         expect(home).toHaveLength(1)
     })
+
+    it('renders SearchBar component as child', () => {
+        const component = <Home />
+        const wrapper = shallow(component)
+
+        const searchBar = wrapper.find('SearchBar')
+
+        expect(searchBar).toHaveLength(1)
+    })
 })

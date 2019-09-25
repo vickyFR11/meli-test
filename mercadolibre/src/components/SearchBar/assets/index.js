@@ -1,0 +1,1 @@
+export const logo = require('./ml_logo.png')

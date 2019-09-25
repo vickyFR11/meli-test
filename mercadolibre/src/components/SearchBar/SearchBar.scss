@@ -1,4 +1,7 @@
+@import '../../variables';
+
 div {
     width: 100%;
-    background-color: yellow;
+    height: 50px;
+    background-color: $yellow_primary_color;
 }
