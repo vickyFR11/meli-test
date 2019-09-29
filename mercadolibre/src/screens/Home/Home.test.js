@@ -16,8 +16,8 @@ describe('Tests for Home screen', () => {
         const component = <Home />
         const wrapper = shallow(component)
 
-        const searchBar = wrapper.find('SearchBar')
+        const searchBarContainer = wrapper.find('[testID="searchBarContainer"]')
 
-        expect(searchBar).toHaveLength(1)
+        expect(searchBarContainer).toHaveLength(1)
     })
 })

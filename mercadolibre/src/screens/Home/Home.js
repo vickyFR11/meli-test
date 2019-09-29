@@ -1,11 +1,11 @@
 import React from 'react'
-import SearchBar from '../../components/SearchBar/SearchBar'
+import SearchBarContainer from '../../containers/SearchBarContainer/SearchBarContainer'
 
 class Home extends React.Component {
     render() {
         return (
             <div>
-                <SearchBar />
+                <SearchBarContainer testID='searchBarContainer' />
             </div>
         )
     }
