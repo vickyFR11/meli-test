@@ -5,18 +5,32 @@ div {
     height: 50px;
     background-color: $yellow_primary_color;
 
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     input {
         height: 30px;
-        width: 60%;
-        color: $light_grey_color;
+        width: 50%;
+        color: $black_color;
         border: none;
         border-radius: 2px 2px;
         font-size: 18px;
+        margin-left: 20px;
+        padding: 0 10px;
     }
 
     button {
         height: 30px;
         width: 30px;
+        border: 0;
+        padding: 0;
         background: $light_grey_color url('./assets/search_icon.png') 5px 5px no-repeat;
+    }
+
+    ::placeholder {
+        color:$dark_grey_color;
     }
 }
