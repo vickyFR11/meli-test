@@ -7,22 +7,10 @@ const axiosInstance = axios.create({
     timeout: 10000
 })
 
-// {
-//     "id": "",
-//     "title": "",
-//     "price": {
-//         "currency": "",
-//         "amount": 0,
-//         "decimals": 0
-//     },
-//     "picture": "",
-//     "condition": "",
-//     "free_shipping": false
-// }
-
 const productItemsMapper = (response) => {
     const items = []
-    response.results.forEach(item => {
+    const apiResponse = response.results.slice(0,4)
+    apiResponse.forEach(item => {
         let product = {
             id: '',
             title: '',
