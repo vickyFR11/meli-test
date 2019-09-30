@@ -1,0 +1,80 @@
+@import '../../variables';
+
+.details-container {
+    display: flex;
+    justify-content: center;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $white_color;
+        width: 80%;
+        border-radius: 4px 4px;
+        margin: $medium_space 0;
+
+        .item-preview {
+            width: 100%;
+            display: flex;
+
+            .image {
+                flex-grow: 2;
+            }
+            
+            img {
+                width: 680px;
+                height: 680px;
+                border-radius: 4px 4px;
+            }
+
+            .selling-wrapper{
+                width: 30%;
+                margin: $medium_space $medium_space 0 0;
+                
+                p {
+                    margin: 0 0 16px 0;
+                    font-size: $small_font_size;
+                    font-weight: $normal_weight;                    
+                }
+
+                .title {
+                    font-size: $large_font_size;
+                    margin: 0 0 $medium_space 0;
+                    font-weight: $bold_weight;
+                }
+                
+                h4 {
+                    margin: 0;
+                    font-size: $extra_large_font_size;
+                    margin: 0 0 $medium_space 0;
+                    font-weight: $normal_weight;
+                }
+
+                button.buy-button {
+                    width: 100%;
+                    background-color: $blue_primary_button_color;
+                    border-radius: 4px 4px;
+                    color: $white_color;
+                    text-align: center;
+                    background-image: none;
+                }
+            }   
+        }
+
+        .description {
+            margin: 0 0 $medium_space $medium_space;
+
+            .description-title {
+                font-size: 28px;
+                margin: 0 0 $medium_space 0;
+                font-weight: $normal_weight;
+            }
+            
+            .description-content {
+                font-size: 16px;
+                color: $grey_color;
+                width: 70%;
+            } 
+        }
+    }
+}

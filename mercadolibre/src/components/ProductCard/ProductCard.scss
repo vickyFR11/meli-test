@@ -1,6 +1,5 @@
 @import '../../variables';
 
-
 .card {
     display: flex;
     width: 90%;
@@ -34,7 +33,7 @@
             p {
                 color: $dark_grey_color;
                 text-align: center;
-                font-size: $small_font_size;
+                font-size: $smallest_font_size;
             }
         }
     }

@@ -1,11 +1,4 @@
-import axios from 'axios'
-
-const BASE_URL = 'https://api.mercadolibre.com/sites/MLA/'
-
-const axiosInstance = axios.create({
-    baseURL: BASE_URL,
-    timeout: 10000
-})
+import { axiosInstance } from '../../api'
 
 const productItemsMapper = (response) => {
     const items = []
@@ -58,7 +51,7 @@ const handleError = (error) => {
 }
 
 export const getSearchResult = (productName) => {
-    const searchQuery = `search?q="${productName}"`
+    const searchQuery = `sites/MLA/search?q="${productName}"`
     return axiosInstance.get(searchQuery)
         .then(response => handleResponse(response))
         .catch(error => handleError(error))

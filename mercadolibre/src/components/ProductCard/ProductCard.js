@@ -2,13 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Currency from 'react-currency-formatter'
 import { shipping } from './assets'
+import { Redirect } from 'react-router-dom'
 import './ProductCard.scss'
 
 class ProductCard extends React.Component {
+    displayProductDetail = () => {
+        const { id } = this.props
+        const itemDetailsPath = `/items/${id}`
+        console.log('click', itemDetailsPath)
+        return <Redirect to='/google' />
+    }
+
     render() {
         const { image, price, title, currency, state, freeShipping } = this.props
         return (
-            <div className='card'>
+            <div className='card' onClick={this.displayProductDetail}>
                 <img alt='imagen' src={image}/>
                 <div className='description'>
                     <div className='labels'>
@@ -31,6 +39,7 @@ class ProductCard extends React.Component {
 }
 
 ProductCard.propTypes = {
+    id: PropTypes.string,
     image: PropTypes.string,
     price: PropTypes.number,
     title: PropTypes.string,

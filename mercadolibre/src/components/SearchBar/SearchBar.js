@@ -24,6 +24,10 @@ class SearchBar extends React.Component {
         this.setState({productName: event.target.value})
     }
 
+    isProductsValid = (products) => {
+        return products !== undefined && products.length > 0
+    }
+
     render() {
         const { products } = this.props
         return (
@@ -33,7 +37,7 @@ class SearchBar extends React.Component {
                     <input alt='buscador' type='text' value={this.state.value} placeholder={PLACEHOLDER_TEXT} onChange={this.handleChanges}/>
                     <button onClick={() => this.searchItems()} />
                 </div>
-                {products.length > 0 && <List items={products}/>}
+                {this.isProductsValid(products) && <List items={products}/>}
             </>
         )
     }
