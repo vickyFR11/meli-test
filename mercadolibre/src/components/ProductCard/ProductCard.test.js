@@ -49,14 +49,27 @@ describe('ProductCard tests', () => {
 
         expect(sellingState).toBe('Buenos Aires')
     })
-    it('renders product images for thumbnail and shipping', () => {
+    it('renders product image', () => {
         const component = <ProductCard image={item.picture} price={item.price.amount} title={item.title} currency={item.price.currency} state={item.state}/>
         const wrapper = shallow(component)
-
-        const productImage = wrapper.find('img').at(0).props()
-        const shippingIcon = wrapper.find('img').at(1).props()
+        const productImage = wrapper.find('img').props()
         
         expect(productImage.src).toContain('/p/MLA6240114')
-        expect(shippingIcon.src).toBe('shipping_icon.png')
+    })
+    it('renders product shipping icon when is a free shipping', () => {
+        const component = <ProductCard image={item.picture} price={item.price.amount} title={item.title} currency={item.price.currency} state={item.state} freeShipping={true}/>
+        const wrapper = shallow(component)
+
+        const shippingIcon = wrapper.find('img').at(1)
+        
+        expect(shippingIcon).toHaveLength(1)
+    })
+    it('does not render product shipping icon when there is not free shipping', () => {
+        const component = <ProductCard image={item.picture} price={item.price.amount} title={item.title} currency={item.price.currency} state={item.state} freeShipping={false}/>
+        const wrapper = shallow(component)
+
+        const shippingIcon = wrapper.find('img').at(1)
+        
+        expect(shippingIcon).toHaveLength(0)
     })
 })

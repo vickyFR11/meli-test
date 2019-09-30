@@ -8,7 +8,7 @@ class List extends React.Component {
         const { items } = this.props
 
         return items.map(item => {
-            return <ProductCard key={item.id} image={item.picture} price={item.price.amount} title={item.title} currency={item.price.currency} state={item.state} />
+            return <ProductCard key={item.id} image={item.picture} price={item.price.amount} title={item.title} currency={item.price.currency} state={item.state} freeShipping={item.free_shipping}/>
         })
     }
 

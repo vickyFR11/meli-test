@@ -6,7 +6,7 @@ import './ProductCard.scss'
 
 class ProductCard extends React.Component {
     render() {
-        const { image, price, title, currency, state } = this.props
+        const { image, price, title, currency, state, freeShipping } = this.props
         return (
             <div className='card'>
                 <img alt='imagen' src={image}/>
@@ -17,7 +17,7 @@ class ProductCard extends React.Component {
                                 quantity={price}
                                 currency={currency}
                             />
-                            <img alt='envio' className='shipping-logo' src={shipping}/>
+                            {freeShipping && <img alt='envio' className='shipping-logo' src={shipping}/>}
                         </h4>
                         <p>{title}</p>
                     </div>
@@ -35,7 +35,8 @@ ProductCard.propTypes = {
     price: PropTypes.number,
     title: PropTypes.string,
     currency: PropTypes.string,
-    state: PropTypes.string
+    state: PropTypes.string,
+    freeShipping: PropTypes.bool
 }
 
 export default ProductCard
