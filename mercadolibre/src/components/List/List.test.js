@@ -25,7 +25,7 @@ describe('List tests', () => {
         
         expect(div).toHaveLength(1)
     })
-    it('renders a ProductCard as a child', () => {
+    it('renders ProductCard as a child', () => {
         const component = <List items={item}/>
         const wrapper = shallow(component)
 

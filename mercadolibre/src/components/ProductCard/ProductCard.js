@@ -2,15 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Currency from 'react-currency-formatter'
 import { shipping } from './assets'
-import { Redirect } from 'react-router-dom'
 import './ProductCard.scss'
 
 class ProductCard extends React.Component {
     displayProductDetail = () => {
         const { id } = this.props
-        const itemDetailsPath = `/items/${id}`
-        console.log('click', itemDetailsPath)
-        return <Redirect to='/google' />
+        window.location = `/items/${id}`
     }
 
     render() {
