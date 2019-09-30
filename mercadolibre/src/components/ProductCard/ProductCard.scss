@@ -1,0 +1,54 @@
+@import '../../variables';
+
+
+.card {
+    display: flex;
+    padding: $small_space;
+    border-bottom: 1px solid $light_grey_color;
+
+    h4 {
+        margin: 0 0 32px 0;
+        font-size: $large_font_size;
+        font-weight: $normal_weight;
+    }
+
+    p {
+        margin: 0;
+        font-size: $medium_font_size;
+        font-weight: $normal_weight;
+    }
+
+    .description {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .labels {
+            width: 60%;
+        }
+
+        .state {
+            width: 40%;
+            
+            p {
+                color: $dark_grey_color;
+                text-align: center;
+                font-size: $small_font_size;
+            }
+        }
+    }
+
+    img {
+        height: $image_size;
+        width: $image_size;
+        margin-right: $small_space;
+        border-radius: 4px 4px;
+    }
+
+    .shipping-logo {
+        margin-left: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
+

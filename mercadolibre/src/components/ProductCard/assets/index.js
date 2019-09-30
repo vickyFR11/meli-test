@@ -1,0 +1,1 @@
+export const shipping = require('./shipping_icon.png')

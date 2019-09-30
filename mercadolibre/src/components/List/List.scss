@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    margin-top: $medium_space;
+    
+    .cards-wrapper {
+        background-color: $white_color;
+        border-radius: 4px 4px;
+    }
+}    
