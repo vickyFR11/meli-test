@@ -41,7 +41,7 @@ class ProductDetail extends React.Component {
                                 currency={price.currency}
                             />
                         </h4>
-                        <button className='buy-button'> Comprar </button>
+                        <button className='buy-button'>Comprar</button>
                     </div>
                 </div>
                 <div className='description'>

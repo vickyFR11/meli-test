@@ -1,6 +1,6 @@
 import { getProductDetails } from '../../api/details/details'
 
-export const initializer = {}
+export const initializer = () => {}
 
 const INITIAL_STATE = {
     productDetails: {},
@@ -20,7 +20,7 @@ export const fetchProductDetailsThunk = (dispatch, productId) => {
     }
 
     function handlesError(){
-
+        dispatch({ type: actions.ERROR_DETAILS })
     }
     return getProductDetails(productId)
         .then(handleSuccessfulResponse)
@@ -35,10 +35,13 @@ export const reducer = (state = INITIAL_STATE, action = {}) => {
                 errorMessage: null
             }
         case actions.FINISH_DETAILS:
-
             return {
                 productDetails: action.productDetails,
                 errorMessage: null
+            }
+        case actions.ERROR_DETAILS:
+            return {
+                errorMessage: 'An error occurred!'
             }
         default:
             return {...state}

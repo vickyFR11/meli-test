@@ -1,6 +1,6 @@
 import { getSearchResult } from '../../api/search/search'
 
-export const initializer = {}
+export const initializer = () => {}
 
 const INITIAL_STATE = {
     products: [],
@@ -20,7 +20,7 @@ export const fetchProductsInformationThunk = (dispatch, productName) => {
     }
 
     function handlesError(){
-
+        dispatch({ type: actions.ERROR })
     }
     return getSearchResult(productName)
         .then(handleSuccessfulResponse)
@@ -38,6 +38,10 @@ export const reducer = (state = INITIAL_STATE, action = {}) => {
             return {
                 products: action.products,
                 errorMessage: null
+            }
+        case actions.ERROR:
+            return {
+                errorMessage: 'An error occurred!'
             }
         default:
             return {...state}
