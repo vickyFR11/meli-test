@@ -47,7 +47,8 @@ const handleResponse = (response) => {
 }
 
 const handleError = (error) => {
-
+    const statusCode = error.response.status
+    return Promise.reject(statusCode)
 }
 
 export const getSearchResult = (productName) => {

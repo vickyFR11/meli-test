@@ -1,0 +1,60 @@
+{
+    "author": {
+        "lastname": "Fuenmayor",
+        "name": "Victoria"
+    },
+    "items": [
+        {
+            "condition": "new",
+            "free_shipping": true,
+            "id": "MLA771190469",
+            "picture": "http://mla-s2-p.mlstatic.com/666479-MLA31024146076_062019-I.jpg",
+            "price": {
+                "amount": 52989.99,
+                "currency": "ARS",
+                "decimals": 0
+            },
+            "state": "Capital Federal",
+            "title": "iPhone 7 Plus 32gb Nuevos Libres Garantia Envios + Templado"
+        },
+        {
+            "condition": "new",
+            "free_shipping": true,
+            "id": "MLA775797451",
+            "picture": "http://mla-s2-p.mlstatic.com/805637-MLA31045530516_062019-I.jpg",
+            "price": {
+                "amount": 28900,
+                "currency": "ARS",
+                "decimals": 0
+            },
+            "state": "Capital Federal",
+            "title": "iPhone 6s 32gb 4g Lte Libre Originales Nuevos"
+        },
+        {
+            "condition": "new",
+            "free_shipping": true,
+            "id": "MLA762226613",
+            "picture": "http://mla-s2-p.mlstatic.com/929816-MLA31023020522_062019-I.jpg",
+            "price": {
+                "amount": 104999,
+                "currency": "ARS",
+                "decimals": 0
+            },
+            "state": "Capital Federal",
+            "title": "Nuevo iPhone Xr 64gb  Entrega Sellado Envio Fact A - B"
+        },
+        {
+            "condition": "new",
+            "free_shipping": true,
+            "id": "MLA690647508",
+            "picture": "http://mla-s1-p.mlstatic.com/994758-MLA31278644911_062019-I.jpg",
+            "price": {
+                "amount": 114999,
+                "currency": "ARS",
+                "decimals": 0
+            },
+            "state": "Capital Federal",
+            "title": "Nuevo Apple iPhone X 64gb Original Garantia 1 Año !!"
+        }
+    ]
+}

@@ -35,10 +35,8 @@ describe('Details Api tests', () => {
             }
         }
         mockAxios.get.mockRejectedValue(error)
-
         const products = getProductDetails(productId)
 
         await expect(products).rejects.toBe(500)
-
     })
 })
