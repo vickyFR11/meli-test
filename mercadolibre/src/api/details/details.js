@@ -13,6 +13,7 @@ const productDetailsMapper = async (response) => {
     item.condition = response.condition
     item.free_shipping = response.shipping.free_shipping
     item.sold_quantity = response.sold_quantity
+
     item.description = await getProductDescription(response.id)
 
     return item
@@ -31,7 +32,8 @@ const handleResponse = async (response) => {
 }
 
 const handleError = (error) => {
-
+    const statusCode = error.response.status
+    return Promise.reject(statusCode)
 }
 
 const getProductDescription = async (productId) => {
